@@ -5,7 +5,7 @@ export default function MembershipSection() {
     <section id="membership-section" className="scroll-section w-full min-h-screen bg-gray-50 flex items-center justify-center pt-6 md:pt-10 pb-0">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center justify-center w-full">
         <div className="max-w-3xl mx-auto w-full">
-          <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-black uppercase text-center mb-1">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black uppercase text-center mb-1">
             MEMBERSHIP
           </h2>
           <p className="text-center text-gray-600 text-xs md:text-sm mb-3 md:mb-4 px-4">
