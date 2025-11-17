@@ -23,7 +23,7 @@ export default function VideoSection() {
         </div>
 
         {/* Right Section - Text Content */}
-        <div className="w-full h-[50%] lg:h-full bg-white px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 flex items-center">
+        <div className="w-full h-[50%] lg:h-full bg-yellow-100 px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 flex items-center">
           <div className="max-w-lg space-y-6 md:space-y-8">
             <p className="text-base md:text-lg lg:text-xl text-black leading-relaxed">
               망설임을 내려놓고 선택하는 순간,

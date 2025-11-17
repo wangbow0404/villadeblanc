@@ -118,7 +118,7 @@ export default function DesignerSection() {
         </div>
 
         {/* Right Section - Text Content */}
-        <div className="w-full h-[30%] lg:h-full bg-gray-800 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 flex items-center py-2 md:py-2 lg:py-0">
+        <div className="w-full h-[30%] lg:h-full bg-orange-300 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 flex items-center py-2 md:py-2 lg:py-0">
           <div className="space-y-1 md:space-y-2 lg:space-y-6 text-white w-full">
             <div className="text-xs md:text-sm uppercase tracking-wider opacity-80">
               DESIGNERS
@@ -138,7 +138,7 @@ export default function DesignerSection() {
                 href={currentDesigner.instagramUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 md:w-12 md:h-12 bg-white rounded-full flex items-center justify-center hover:bg-gray-100 transition-all duration-300 hover:scale-110"
+                className="w-10 h-10 md:w-12 md:h-12 bg-white rounded-full flex items-center justify-center hover:bg-purple-100 transition-all duration-300 hover:scale-110"
                 aria-label="인스타그램"
               >
                 <svg
@@ -155,7 +155,7 @@ export default function DesignerSection() {
                 href={currentDesigner.naverReservationUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 md:w-12 md:h-12 bg-white rounded-full flex items-center justify-center hover:bg-gray-100 transition-all duration-300 hover:scale-110"
+                className="w-10 h-10 md:w-12 md:h-12 bg-white rounded-full flex items-center justify-center hover:bg-green-100 transition-all duration-300 hover:scale-110"
                 aria-label="네이버 예약하기"
               >
                 <svg
