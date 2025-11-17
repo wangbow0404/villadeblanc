@@ -47,3 +47,16 @@ body {
   scroll-snap-stop: always;
   min-height: 100vh;
 }
+
+/* 섹션 간 여백 제거 */
+main > section {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+/* 섹션 간 간격 완전 제거 */
+main {
+  margin: 0;
+  padding: 0;
+}

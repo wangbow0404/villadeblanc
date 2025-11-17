@@ -26,7 +26,7 @@ export default function Header() {
             >
               <Image
                 src="/assets/images/logo-2.png"
-                alt="AYUNCHE"
+                alt="VILLA de BLANC"
                 width={800}
                 height={267}
                 className="h-32 md:h-44 lg:h-56 w-auto object-contain"

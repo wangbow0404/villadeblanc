@@ -60,7 +60,7 @@ export default function HeroSection() {
   }, [slides.length]);
 
   return (
-    <section id="brand-section" className="scroll-section relative w-full min-h-screen bg-gray-100 flex items-center overflow-hidden pt-16 md:pt-20">
+    <section id="brand-section" className="scroll-section relative w-full h-screen bg-gray-100 flex items-center overflow-hidden" style={{ paddingTop: '4rem' }}>
       {/* Background Images with Fade Effect */}
       <div className="absolute inset-0 w-full h-full">
         {slides.map((slide, index) => (
@@ -94,8 +94,8 @@ export default function HeroSection() {
       </div>
 
       {/* Content Overlay */}
-      <div className="relative z-20 w-full h-full flex items-center">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center py-12 md:py-0">
+      <div className="relative z-20 w-full h-full flex items-center justify-start">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 w-full h-full flex items-center">
           <div className="max-w-2xl space-y-4 md:space-y-6">
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white uppercase tracking-tight leading-tight">
               {slides[currentSlide].title}

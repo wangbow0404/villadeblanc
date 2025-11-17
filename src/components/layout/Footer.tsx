@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer id="contact-section" className="scroll-section w-full min-h-screen bg-black text-white py-12 md:py-16 flex items-center">
+    <footer id="contact-section" className="scroll-section w-full min-h-screen bg-black text-white pt-8 md:pt-12 pb-6 md:pb-8 flex items-center justify-center">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-8 md:mb-12">

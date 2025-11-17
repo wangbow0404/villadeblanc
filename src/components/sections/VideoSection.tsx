@@ -6,9 +6,9 @@ export default function VideoSection() {
       id="video-section"
       className="scroll-section w-full h-screen bg-white relative overflow-hidden"
     >
-      <div className="w-full max-w-full h-[calc(100vh-4rem)] md:h-[calc(100vh-5rem)] flex flex-col lg:grid lg:grid-cols-[50%_50%] relative">
+      <div className="w-full h-full flex flex-col lg:grid lg:grid-cols-[50%_50%] relative">
         {/* Left Section - Video */}
-        <div className="relative w-full h-[50%] lg:h-full overflow-hidden bg-black">
+        <div className="relative w-full h-[60%] lg:h-full overflow-hidden bg-black">
           <video
             className="w-full h-full object-cover"
             autoPlay
@@ -23,7 +23,7 @@ export default function VideoSection() {
         </div>
 
         {/* Right Section - Text Content */}
-        <div className="w-full h-[50%] lg:h-full bg-yellow-100 px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 flex items-center">
+        <div className="w-full flex-1 lg:h-full bg-white px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 flex items-center">
           <div className="max-w-lg space-y-6 md:space-y-8">
             <p className="text-base md:text-lg lg:text-xl text-black leading-relaxed">
               망설임을 내려놓고 선택하는 순간,

@@ -88,9 +88,9 @@ export default function DesignerSection() {
       id="designer-section"
       className="scroll-section w-full h-screen bg-white relative overflow-hidden"
     >
-      <div className="w-full max-w-full h-[calc(100vh-4rem)] md:h-[calc(100vh-5rem)] flex flex-col lg:grid lg:grid-cols-[60%_40%] relative">
+      <div className="w-full h-full flex flex-col lg:grid lg:grid-cols-[60%_40%] relative">
         {/* Left Section - Image Carousel */}
-        <div className="relative w-full h-[70%] lg:h-full overflow-hidden bg-white">
+        <div className="relative w-full h-[60%] lg:h-full overflow-hidden bg-white">
             {slides.map((slide, index) => (
               <div
                 key={slide.id}
@@ -99,12 +99,14 @@ export default function DesignerSection() {
                 }`}
               >
                 <div
-                  className="w-full h-full bg-cover bg-center bg-no-repeat"
+                  className="w-full h-full bg-center bg-no-repeat"
                   style={{
                     backgroundImage: slide.image && slide.image.includes('.jpeg') 
                       ? `url(${slide.image})` 
                       : undefined,
-                    backgroundColor: (!slide.image || !slide.image.includes('.jpeg')) ? '#ffffff' : undefined,
+                    backgroundColor: (!slide.image || !slide.image.includes('.jpeg')) ? '#ffffff' : '#ffffff',
+                    backgroundPosition: 'center center',
+                    backgroundSize: '110%',
                   }}
                 >
                   {(!slide.image || !slide.image.includes('.jpeg')) && (
@@ -118,7 +120,7 @@ export default function DesignerSection() {
         </div>
 
         {/* Right Section - Text Content */}
-        <div className="w-full h-[30%] lg:h-full bg-orange-300 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 flex items-center py-2 md:py-2 lg:py-0">
+        <div className="w-full flex-1 lg:h-full bg-orange-300 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 flex items-center py-2 md:py-2 lg:py-0">
           <div className="space-y-1 md:space-y-2 lg:space-y-6 text-white w-full">
             <div className="text-xs md:text-sm uppercase tracking-wider opacity-80">
               DESIGNERS
