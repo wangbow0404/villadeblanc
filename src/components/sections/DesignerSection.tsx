@@ -120,20 +120,9 @@ export default function DesignerSection() {
 
         {/* Right Section - Text Content */}
         <div className="w-full flex-1 lg:h-full bg-orange-300 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 flex items-center py-2 md:py-2 lg:py-0">
-          <div className="space-y-1 md:space-y-2 lg:space-y-6 text-white w-full">
-            <div className="text-xs md:text-sm uppercase tracking-wider opacity-80">
-              DESIGNERS
-            </div>
-            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl xl:text-6xl font-bold uppercase tracking-tight leading-tight">
-              <span className="block">EXPERT</span>
-              <span className="block">TEAM</span>
-            </h2>
-            <p className="text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed opacity-90 line-clamp-2">
-              VILLA de BLANC의 전문 헤어디자이너들을 만나 보세요.
-            </p>
-            
-            {/* Social Media Links */}
-            <div className="flex items-center space-x-3 md:space-x-4 mt-2 md:mt-3 lg:mt-8">
+          <div className="flex flex-col space-y-1 md:space-y-2 lg:space-y-6 text-white w-full">
+            {/* Social Media Links - 모바일에서 가장 위에 표시, 데스크톱에서는 아래 */}
+            <div className="flex items-center space-x-3 md:space-x-4 order-first lg:order-4 mb-2 lg:mb-0 lg:mt-8">
               {/* Instagram */}
               <a
                 href={currentDesigner.instagramUrl}
@@ -168,6 +157,17 @@ export default function DesignerSection() {
                 </svg>
               </a>
             </div>
+            
+            <div className="text-xs md:text-sm uppercase tracking-wider opacity-80 order-1 lg:order-0">
+              DESIGNERS
+            </div>
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl xl:text-6xl font-bold uppercase tracking-tight leading-tight order-2">
+              <span className="block">EXPERT</span>
+              <span className="block">TEAM</span>
+            </h2>
+            <p className="text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed opacity-90 line-clamp-2 order-3">
+              VILLA de BLANC의 전문 헤어디자이너들을 만나 보세요.
+            </p>
           </div>
         </div>
       </div>

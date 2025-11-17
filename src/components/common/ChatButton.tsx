@@ -35,7 +35,7 @@ export default function ChatButton() {
             <div className="space-y-4">
               <div className="bg-gray-100 rounded-lg p-3">
                 <p className="text-sm text-gray-700">
-                  안녕하세요! AYUNCHE 고객센터입니다. 무엇을 도와드릴까요?
+                  안녕하세요! VILLA de BLANC 고객센터입니다. 무엇을 도와드릴까요?
                 </p>
               </div>
             </div>

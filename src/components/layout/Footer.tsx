@@ -14,7 +14,7 @@ export default function Footer() {
                 COMPANY INFO
               </h3>
               <div className="space-y-1.5 md:space-y-2 text-xs sm:text-sm text-gray-400">
-                <p>AYUNCHE</p>
+                <p>VILLA de BLANC</p>
                 <p>서울특별시 강남구 논현로 149길 8,</p>
                 <p>2층</p>
                 <p>(주)빌라드블랑</p>

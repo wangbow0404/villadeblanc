@@ -5,6 +5,7 @@
   --foreground: #171717;
 }
 
+/* Tailwind CSS v4 @theme directive - 린터 경고 무시 */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);

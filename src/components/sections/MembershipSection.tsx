@@ -1,17 +1,17 @@
 import Image from 'next/image';
 
-export default function App() {
+export default function MembershipSection() {
   return (
     <section
       id="membership-section"
-      className="scroll-section w-full bg-gray-50 flex items-center justify-center py-12 md:py-16 lg:py-20"
+      className="scroll-section w-full min-h-screen bg-gray-50 flex items-start justify-center pb-0"
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 w-full flex items-center justify-center">
-        <div className="max-w-3xl mx-auto w-full">
-          <h2 className="text-center mb-1 md:mb-2 text-black uppercase">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 w-full flex items-start justify-center w-full">
+        <div className="max-w-3xl mx-auto w-full mt-8 md:mt-[6rem] lg:mt-[8rem]">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black uppercase text-center mb-1 md:mb-2">
             MEMBERSHIP
           </h2>
-          <p className="text-center text-gray-600 mb-3 md:mb-6 px-4">
+          <p className="text-center text-gray-600 text-xs md:text-sm mb-12 md:mb-20 lg:mb-24 px-4">
             VB의 특별한 구독혜택
           </p>
           
@@ -27,14 +27,14 @@ export default function App() {
               />
               <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent flex items-center">
                 <div className="p-3 md:p-4 lg:p-5 text-white relative z-10">
-                  <div className="text-gray-300 uppercase mb-0.5 md:mb-1">6 MONTHS ONLY</div>
-                  <h3 className="mb-1 md:mb-1.5">
+                  <div className="text-[10px] md:text-xs text-gray-300 uppercase mb-0.5 md:mb-1">6 MONTHS ONLY</div>
+                  <h3 className="text-sm md:text-base lg:text-lg font-bold mb-1 md:mb-1.5">
                     6개월 구독 고객 전용
                   </h3>
-                  <p className="text-gray-200 mb-1.5 md:mb-2 leading-relaxed">
+                  <p className="text-[10px] md:text-xs text-gray-200 mb-1.5 md:mb-2 leading-relaxed">
                     헤어케어를 위해 준비한 VB의 특별한 혜택을 만나 보실 수 있습니다.
                   </p>
-                  <button className="text-white uppercase underline hover:opacity-80 transition-opacity">
+                  <button className="text-white uppercase underline text-[10px] md:text-xs hover:opacity-80 transition-opacity">
                     VIEW MORE
                   </button>
                 </div>
@@ -51,14 +51,14 @@ export default function App() {
               />
               <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent flex items-center">
                 <div className="p-3 md:p-4 lg:p-5 text-white relative z-10">
-                  <div className="text-gray-300 uppercase mb-0.5 md:mb-1">VB SUBSCRIPTION</div>
-                  <h3 className="mb-1 md:mb-1.5">
-                    ��리미엄 구독 고객 전용
+                  <div className="text-[10px] md:text-xs text-gray-300 uppercase mb-0.5 md:mb-1">VB SUBSCRIPTION</div>
+                  <h3 className="text-sm md:text-base lg:text-lg font-bold mb-1 md:mb-1.5">
+                    프리미엄 구독 고객 전용
                   </h3>
-                  <p className="text-gray-200 mb-1.5 md:mb-2 leading-relaxed">
+                  <p className="text-[10px] md:text-xs text-gray-200 mb-1.5 md:mb-2 leading-relaxed">
                     프리미엄 고객에게만 제공되는 VB의 차별화된 혜택을 경험할 수 있습니다.
                   </p>
-                  <button className="text-white uppercase underline hover:opacity-80 transition-opacity">
+                  <button className="text-white uppercase underline text-[10px] md:text-xs hover:opacity-80 transition-opacity">
                     카카오톡 상담하기
                   </button>
                 </div>

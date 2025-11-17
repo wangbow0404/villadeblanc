@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AYUNCHE",
-  description: "AYUNCHE Official Website",
+  title: "VILLA de BLANC",
+  description: "VILLA de BLANC Official Website",
 };
 
 export default function RootLayout({

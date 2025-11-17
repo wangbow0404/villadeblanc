@@ -23,9 +23,9 @@ export default function ProductsSection() {
   ];
 
   return (
-    <section id="lineup-section" className="scroll-section w-full min-h-screen bg-white flex items-center justify-center pt-8 md:pt-12 pb-4 md:pb-6">
+    <section id="lineup-section" className="scroll-section w-full min-h-screen bg-white flex items-center justify-center pb-4 md:pb-6">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-center w-full">
-        <div className="max-w-7xl mx-auto w-full">
+        <div className="max-w-7xl mx-auto w-full mt-16 md:mt-24 lg:mt-32">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black uppercase text-center mb-3 md:mb-4">
             BEST SELLERS
           </h2>
