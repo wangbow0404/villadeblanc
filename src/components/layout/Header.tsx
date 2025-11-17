@@ -14,6 +14,11 @@ export default function Header() {
     setIsMenuOpen(false);
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setIsMenuOpen(false);
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white">
       <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8">
@@ -21,7 +26,7 @@ export default function Header() {
           {/* Logo */}
           <div className="flex items-center">
             <button
-              onClick={() => scrollToSection('brand-section')}
+              onClick={scrollToTop}
               className="hover:opacity-80 transition-opacity bg-transparent"
             >
               <Image
@@ -39,7 +44,7 @@ export default function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-4 lg:space-x-6 xl:space-x-8">
             <button
-              onClick={() => scrollToSection('brand-section')}
+              onClick={() => scrollToSection('video-section')}
               className="text-sm font-medium text-black uppercase tracking-wide hover:text-gray-600 transition-colors"
             >
               BRAND
@@ -148,7 +153,7 @@ export default function Header() {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t">
             <button
-              onClick={() => scrollToSection('brand-section')}
+              onClick={() => scrollToSection('video-section')}
               className="block w-full text-left px-4 py-2 text-sm font-medium text-black uppercase hover:bg-gray-50"
             >
               BRAND

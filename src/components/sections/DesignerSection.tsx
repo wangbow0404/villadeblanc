@@ -10,8 +10,8 @@ export default function DesignerSection() {
       id: 1,
       image: '/assets/images/designer-1.jpeg',
       bgColor: 'from-gray-200 to-gray-300',
-      instagramUrl: 'https://www.instagram.com/_______hji/', // 실제 인스타그램 URL로 변경 필요
-      naverReservationUrl: 'https://naver.me/FtGykcUQ', // 실제 네이버 예약 URL로 변경 필요
+      instagramUrl: 'https://www.instagram.com/_______hji/',
+      naverReservationUrl: 'https://naver.me/FtGykcUQ',
     },
     {
       id: 2,
@@ -99,12 +99,11 @@ export default function DesignerSection() {
                 }`}
               >
                 <div
-                  className="w-full h-full bg-center bg-no-repeat"
+                  className="w-full h-full bg-center bg-no-repeat bg-white"
                   style={{
                     backgroundImage: slide.image && slide.image.includes('.jpeg') 
                       ? `url(${slide.image})` 
                       : undefined,
-                    backgroundColor: (!slide.image || !slide.image.includes('.jpeg')) ? '#ffffff' : '#ffffff',
                     backgroundPosition: 'center center',
                     backgroundSize: '110%',
                   }}
@@ -173,7 +172,7 @@ export default function DesignerSection() {
         </div>
       </div>
 
-      {/* Left Arrow - 전체 섹션의 왼쪽 끝 */}
+      {/* Left Arrow */}
       <button
         onClick={goToPrevious}
         className="absolute left-2 md:left-4 top-1/2 transform -translate-y-1/2 z-30 w-10 h-10 md:w-12 md:h-12 bg-white border border-gray-300 rounded-full flex items-center justify-center shadow-md hover:bg-gray-50 transition-all duration-300"
@@ -194,7 +193,7 @@ export default function DesignerSection() {
         </svg>
       </button>
 
-      {/* Right Arrow - 전체 섹션의 오른쪽 끝 */}
+      {/* Right Arrow */}
       <button
         onClick={goToNext}
         className="absolute right-2 md:right-4 top-1/2 transform -translate-y-1/2 z-30 w-10 h-10 md:w-12 md:h-12 bg-white border border-gray-300 rounded-full flex items-center justify-center shadow-md hover:bg-gray-50 transition-all duration-300"
@@ -215,7 +214,7 @@ export default function DesignerSection() {
         </svg>
       </button>
 
-      {/* Pagination Dots - 전체 섹션의 하단 중앙 */}
+      {/* Pagination Dots */}
       <div className="absolute bottom-3 md:bottom-4 lg:bottom-6 left-1/2 transform -translate-x-1/2 z-30 flex space-x-1.5 md:space-x-2">
         {slides.map((_, index) => (
           <button

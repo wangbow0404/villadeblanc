@@ -7,7 +7,7 @@ export default function HeroSection() {
   const slides = [
     {
       id: 1,
-      image: '/assets/images/villa-de-blanc-1.jpg', // VILLA de BLANC 건물 전경
+      image: '/assets/images/villa-de-blanc-1.jpg',
       bgColor: 'from-blue-50 to-gray-50',
       title: 'VILLA de BLANC',
       text: [
@@ -18,7 +18,7 @@ export default function HeroSection() {
     },
     {
       id: 2,
-      image: '/assets/images/villa-de-blanc-2.jpg', // VILLA de BLANC 건물 다른 각도
+      image: '/assets/images/villa-de-blanc-2.jpg',
       bgColor: 'from-stone-50 to-gray-50',
       title: 'VILLA de BLANC',
       text: [
@@ -29,7 +29,7 @@ export default function HeroSection() {
     },
     {
       id: 3,
-      image: '/assets/images/villa-de-blanc-3.jpg', // VILLA de BLANC 내부 또는 다른 각도
+      image: '/assets/images/villa-de-blanc-3.jpg',
       bgColor: 'from-gray-50 to-blue-50',
       title: 'VILLA de BLANC',
       text: [
@@ -40,7 +40,7 @@ export default function HeroSection() {
     },
     {
       id: 4,
-      image: '/assets/images/villa-de-blanc-4.jpg', // VILLA de BLANC 야외 공간 또는 다른 각도
+      image: '/assets/images/villa-de-blanc-4.jpg',
       bgColor: 'from-gray-50 to-stone-50',
       title: 'VILLA de BLANC',
       text: [
@@ -60,7 +60,7 @@ export default function HeroSection() {
   }, [slides.length]);
 
   return (
-    <section id="brand-section" className="scroll-section relative w-full h-screen bg-gray-100 flex items-center overflow-hidden" style={{ paddingTop: '4rem' }}>
+    <section id="brand-section" className="scroll-section relative w-full h-screen bg-gray-100 flex items-center overflow-hidden pt-16">
       {/* Background Images with Fade Effect */}
       <div className="absolute inset-0 w-full h-full">
         {slides.map((slide, index) => (
@@ -79,7 +79,7 @@ export default function HeroSection() {
                   : undefined,
               }}
             >
-              {/* Overlay for better text readability - 건물 사진에 맞게 조정 */}
+              {/* Overlay for better text readability */}
               <div className="absolute inset-0 bg-gradient-to-r from-gray-900/70 via-gray-800/50 to-transparent"></div>
               
               {/* Placeholder text if image doesn't exist */}

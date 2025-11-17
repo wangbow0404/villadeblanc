@@ -38,14 +38,18 @@ html {
   }
 }
 
-body {
-  scroll-snap-type: y mandatory;
-}
-
+/* 기본: 한 화면을 차지하는 스냅 섹션 */
 .scroll-section {
   scroll-snap-align: start;
   scroll-snap-stop: always;
   min-height: 100vh;
+}
+
+/* 예외: 멤버십, 푸터 등 - 화면 전체를 차지하지 않고 자연 높이로 쓰는 섹션 */
+.no-snap-section {
+  scroll-snap-align: none;
+  scroll-snap-stop: normal;
+  min-height: auto;
 }
 
 /* 섹션 간 여백 제거 */
