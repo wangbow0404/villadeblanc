@@ -104,8 +104,8 @@ export default function DesignerSection() {
                     backgroundImage: slide.image && slide.image.includes('.jpeg') 
                       ? `url(${slide.image})` 
                       : undefined,
-                    backgroundPosition: 'center center',
-                    backgroundSize: '110%',
+                    backgroundPosition: 'center 30%',
+                    backgroundSize: 'cover',
                   }}
                 >
                   {(!slide.image || !slide.image.includes('.jpeg')) && (

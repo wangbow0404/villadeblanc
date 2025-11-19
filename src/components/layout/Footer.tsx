@@ -27,11 +27,11 @@ export default function Footer() {
             {/* CS CENTER */}
             <div>
               <h4 className="text-base md:text-lg font-semibold uppercase mb-3 md:mb-4">
-                CS CENTER
+                CONTACT US
               </h4>
               <div className="space-y-1.5 md:space-y-2 text-xs sm:text-sm">
                 <p className="text-xl md:text-2xl font-bold text-white mb-3 md:mb-4">
-                  080-023-0707
+                  070-4193-8888
                 </p>
                 <p className="text-gray-400">운영시간 : 10:00~19:00</p>
                 <p className="text-gray-400">휴무일 : 신정, 설연휴, 추석연휴</p>
