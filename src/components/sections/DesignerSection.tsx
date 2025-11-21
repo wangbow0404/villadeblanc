@@ -99,13 +99,12 @@ export default function DesignerSection() {
                 }`}
               >
                 <div
-                  className="w-full h-full bg-center bg-no-repeat bg-white"
+                  className="w-full h-full bg-cover bg-center bg-no-repeat bg-white"
                   style={{
                     backgroundImage: slide.image && slide.image.includes('.jpeg') 
                       ? `url(${slide.image})` 
                       : undefined,
                     backgroundPosition: 'center 30%',
-                    backgroundSize: 'cover',
                   }}
                 >
                   {(!slide.image || !slide.image.includes('.jpeg')) && (
