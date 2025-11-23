@@ -69,7 +69,7 @@ export const metadata: Metadata = {
   },
   // 네이버 검색 최적화
   other: {
-    "naver-site-verification": "", // 네이버 웹마스터 도구에서 받은 인증 코드를 여기에 입력하세요
+    "naver-site-verification": "f1ea98ceb11adfad931f8b48ce857c26332a00db",
   },
 };
 
