@@ -24,14 +24,17 @@ export default function MembershipSection() {
                 alt="6개월 구독 고객 전용"
                 fill
                 className="object-cover"
+                loading="lazy"
+                quality={85}
+                sizes="(max-width: 1024px) 100vw, 50vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent flex items-center">
+              <div className="absolute inset-0 bg-gradient-to-r from-yellow/60 via-yellow/40 to-transparent flex items-center">
                 <div className="p-3 md:p-4 lg:p-5 text-white relative z-10">
-                  <div className="text-[10px] md:text-xs text-gray-300 uppercase mb-0.5 md:mb-1">6 MONTHS ONLY</div>
+                  <div className="text-[10px] md:text-xs text-white-300 uppercase mb-0.5 md:mb-1">6 MONTHS ONLY</div>
                   <h3 className="text-sm md:text-base lg:text-lg font-bold mb-1 md:mb-1.5">
                     6개월 구독 고객 전용
                   </h3>
-                  <p className="text-[10px] md:text-xs text-gray-200 mb-1.5 md:mb-2 leading-relaxed">
+                  <p className="text-[10px] md:text-xs text-white-300 mb-1.5 md:mb-2 leading-relaxed">
                     헤어케어를 위해 준비한 VB의 특별한 혜택을 만나 보실 수 있습니다.
                   </p>
                   <button className="text-white uppercase underline text-[10px] md:text-xs hover:opacity-80 transition-opacity">
@@ -48,6 +51,9 @@ export default function MembershipSection() {
                 alt="프리미엄 구독 고객 전용"
                 fill
                 className="object-cover"
+                loading="lazy"
+                quality={85}
+                sizes="(max-width: 1024px) 100vw, 50vw"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent flex items-center">
                 <div className="p-3 md:p-4 lg:p-5 text-white relative z-10">

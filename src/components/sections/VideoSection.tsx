@@ -4,33 +4,38 @@ export default function VideoSection() {
   return (
     <section
       id="video-section"
-      className="scroll-section w-full h-screen bg-white relative overflow-hidden"
+      className="scroll-section w-full h-screen bg-black relative overflow-hidden"
     >
-      <div className="w-full h-full flex flex-col lg:grid lg:grid-cols-[50%_50%] relative">
-        {/* Left Section - Video */}
-        <div className="relative w-full h-[60%] lg:h-full overflow-hidden bg-black">
-          <video
-            className="w-full h-full object-cover"
-            autoPlay
-            muted
-            loop
-            playsInline
-          >
-            <source src="/assets/videos/video.mp4" type="video/mp4" />
-            <source src="/assets/videos/video.webm" type="video/webm" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
+      {/* Full Screen Video */}
+      <div className="absolute inset-0 w-full h-full">
+        <video
+          className="w-full h-full object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
+        >
+          <source src="/assets/videos/video.mp4" type="video/mp4" />
+          <source src="/assets/videos/video.webm" type="video/webm" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
 
-        {/* Right Section - Text Content */}
-        <div className="w-full flex-1 lg:h-full bg-white px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 flex items-center">
-          <div className="max-w-lg space-y-6 md:space-y-8">
-            <p className="text-base md:text-lg lg:text-xl text-black leading-relaxed">
-              망설임을 내려놓고 선택하는 순간,
-              <br />
-              이제서야 나도 이런 머릿결을 느낄 수 있게 된다.
-            </p>
-          </div>
+      {/* Text Overlay - Centered */}
+      <div className="relative z-10 w-full h-full flex items-center justify-center">
+        <div className="max-w-2xl px-10 sm:px-12 md:px-16 text-center">
+          <p 
+            className="text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-white leading-relaxed drop-shadow-lg"
+            style={{
+              fontFamily: '"Chiron Sung HK", serif',
+              fontOpticalSizing: 'auto',
+              fontStyle: 'normal',
+            }}
+          >
+            망설임을 내려놓고 선택하는 순간,
+            <br />
+            이제서야 나도 이런 머릿결을 느낄 수 있게 된다.
+          </p>
         </div>
       </div>
     </section>

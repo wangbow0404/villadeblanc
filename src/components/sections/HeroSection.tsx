@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 export default function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -71,23 +72,24 @@ export default function HeroSection() {
             }`}
           >
             {/* Background Image or Placeholder */}
-            <div
-              className={`w-full h-full bg-cover bg-center bg-no-repeat bg-gradient-to-r ${slide.bgColor}`}
-              style={{
-                backgroundImage: slide.image && slide.image.includes('.jpg') 
-                  ? `url(${slide.image})` 
-                  : undefined,
-              }}
-            >
-              {/* Overlay for better text readability */}
-              <div className="absolute inset-0 bg-gradient-to-r from-gray-900/70 via-gray-800/50 to-transparent"></div>
-              
-              {/* Placeholder text if image doesn't exist */}
-              {(!slide.image || !slide.image.includes('.jpg')) && (
+            <div className={`relative w-full h-full bg-gradient-to-r ${slide.bgColor}`}>
+              {slide.image && slide.image.includes('.jpg') ? (
+                <Image
+                  src={slide.image}
+                  alt={`VILLA de BLANC ${slide.id}`}
+                  fill
+                  className="object-cover"
+                  priority={index === 0}
+                  quality={85}
+                  sizes="100vw"
+                />
+              ) : (
                 <div className={`w-full h-full flex items-center justify-center bg-gradient-to-r ${slide.bgColor}`}>
                   <span className="text-gray-500 text-sm">VILLA de BLANC Image {slide.id}</span>
                 </div>
               )}
+              {/* Overlay for better text readability */}
+              <div className="absolute inset-0 bg-gradient-to-r from-gray-900/70 via-gray-800/50 to-transparent"></div>
             </div>
           </div>
         ))}

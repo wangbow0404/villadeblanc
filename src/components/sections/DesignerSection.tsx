@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 export default function DesignerSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -98,16 +99,19 @@ export default function DesignerSection() {
                   index === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0'
                 }`}
               >
-                <div
-                  className="w-full h-full bg-cover bg-center bg-no-repeat bg-white"
-                  style={{
-                    backgroundImage: slide.image && slide.image.includes('.jpeg') 
-                      ? `url(${slide.image})` 
-                      : undefined,
-                    backgroundPosition: 'center 30%',
-                  }}
-                >
-                  {(!slide.image || !slide.image.includes('.jpeg')) && (
+                <div className="relative w-full h-full bg-white">
+                  {slide.image && slide.image.includes('.jpeg') ? (
+                    <Image
+                      src={slide.image}
+                      alt={`Designer ${slide.id}`}
+                      fill
+                      className="object-cover"
+                      style={{ objectPosition: 'center 30%' }}
+                      priority={index === 0}
+                      quality={85}
+                      sizes="(max-width: 1024px) 100vw, 60vw"
+                    />
+                  ) : (
                     <div className="w-full h-full bg-white flex items-center justify-center">
                       <span className="text-gray-400 text-sm">Designer Image {slide.id}</span>
                     </div>
