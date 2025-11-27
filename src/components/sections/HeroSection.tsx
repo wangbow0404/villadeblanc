@@ -1,10 +1,15 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 
 export default function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
+  const [isDragging, setIsDragging] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+
   const slides = [
     {
       id: 1,
@@ -41,7 +46,7 @@ export default function HeroSection() {
     },
     {
       id: 4,
-      image: '/assets/images/villa-de-blanc-4.jpg',
+      image: '/assets/images/villa-de-blanc-4.jpeg',
       bgColor: 'from-gray-50 to-stone-50',
       title: 'VILLA de BLANC',
       text: [
@@ -52,16 +57,93 @@ export default function HeroSection() {
     },
   ];
 
+  // 터치/드래그로 슬라이드 변경
+  const minSwipeDistance = 50;
+
+  const onTouchStart = (e: React.TouchEvent) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const onTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+
+    if (isLeftSwipe) {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }
+    if (isRightSwipe) {
+      setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+    }
+
+    setTouchStart(null);
+    setTouchEnd(null);
+  };
+
+  // 마우스 드래그 이벤트
+  const onMouseDown = (e: React.MouseEvent) => {
+    setIsDragging(true);
+    setTouchStart(e.clientX);
+  };
+
+  const onMouseMove = (e: React.MouseEvent) => {
+    if (!isDragging) return;
+    setTouchEnd(e.clientX);
+  };
+
+  const onMouseUp = () => {
+    if (!isDragging || !touchStart || !touchEnd) {
+      setIsDragging(false);
+      return;
+    }
+
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+
+    if (isLeftSwipe) {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }
+    if (isRightSwipe) {
+      setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+    }
+
+    setIsDragging(false);
+    setTouchStart(null);
+    setTouchEnd(null);
+  };
+
   useEffect(() => {
+    // 드래그 중일 때는 자동 슬라이드 일시정지
+    if (isDragging) return;
+
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 5000); // 5초마다 변경
 
     return () => clearInterval(timer);
-  }, [slides.length]);
+  }, [slides.length, isDragging]);
 
   return (
-    <section id="brand-section" className="scroll-section relative w-full h-screen bg-gray-100 flex items-center overflow-hidden pt-16">
+    <section 
+      id="brand-section" 
+      ref={sectionRef}
+      className="scroll-section relative w-full h-screen bg-gray-100 flex items-center overflow-hidden pt-16 cursor-grab active:cursor-grabbing"
+      onTouchStart={onTouchStart}
+      onTouchMove={onTouchMove}
+      onTouchEnd={onTouchEnd}
+      onMouseDown={onMouseDown}
+      onMouseMove={onMouseMove}
+      onMouseUp={onMouseUp}
+      onMouseLeave={onMouseUp}
+    >
       {/* Background Images with Fade Effect */}
       <div className="absolute inset-0 w-full h-full">
         {slides.map((slide, index) => (
@@ -73,7 +155,7 @@ export default function HeroSection() {
           >
             {/* Background Image or Placeholder */}
             <div className={`relative w-full h-full bg-gradient-to-r ${slide.bgColor}`}>
-              {slide.image && slide.image.includes('.jpg') ? (
+              {slide.image && (slide.image.includes('.jpg') || slide.image.includes('.jpeg')) ? (
                 <Image
                   src={slide.image}
                   alt={`VILLA de BLANC ${slide.id}`}

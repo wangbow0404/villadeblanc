@@ -62,6 +62,12 @@ export default function Header() {
               LINEUP
             </button>
             <button
+              onClick={() => scrollToSection('partner-section')}
+              className="text-sm font-medium text-black uppercase tracking-wide hover:text-gray-600 transition-colors"
+            >
+              PARTNERS
+            </button>
+            <button
               onClick={() => scrollToSection('membership-section')}
               className="text-sm font-medium text-black uppercase tracking-wide hover:text-gray-600 transition-colors"
             >
@@ -169,6 +175,12 @@ export default function Header() {
               className="block w-full text-left px-4 py-2 text-sm font-medium text-black uppercase hover:bg-gray-50"
             >
               LINEUP
+            </button>
+            <button
+              onClick={() => scrollToSection('partner-section')}
+              className="block w-full text-left px-4 py-2 text-sm font-medium text-black uppercase hover:bg-gray-50"
+            >
+              PARTNERS
             </button>
             <button
               onClick={() => scrollToSection('membership-section')}

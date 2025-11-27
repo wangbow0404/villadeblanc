@@ -7,9 +7,9 @@ export default function VideoSection() {
       className="scroll-section w-full h-screen bg-black relative overflow-hidden"
     >
       {/* Full Screen Video */}
-      <div className="absolute inset-0 w-full h-full">
+      <div className="absolute inset-0 w-full h-full overflow-hidden">
         <video
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover md:scale-100 scale-[0.95] transition-transform duration-300"
           autoPlay
           muted
           loop
@@ -25,12 +25,7 @@ export default function VideoSection() {
       <div className="relative z-10 w-full h-full flex items-center justify-center">
         <div className="max-w-2xl px-10 sm:px-12 md:px-16 text-center">
           <p 
-            className="text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-white leading-relaxed drop-shadow-lg"
-            style={{
-              fontFamily: '"Chiron Sung HK", serif',
-              fontOpticalSizing: 'auto',
-              fontStyle: 'normal',
-            }}
+            className="noto-sans-kr text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-white leading-relaxed drop-shadow-lg font-normal"
           >
             망설임을 내려놓고 선택하는 순간,
             <br />

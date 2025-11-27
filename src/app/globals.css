@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Chiron+Sung+HK:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import "tailwindcss";
 
 :root {
@@ -65,4 +66,46 @@ main > section {
 main {
   margin: 0;
   padding: 0;
+}
+
+/* Noto Sans KR 폰트 클래스 */
+.noto-sans-kr {
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+/* Tailwind font-weight 클래스와 함께 사용 가능:
+   - font-thin (100)
+   - font-extralight (200)
+   - font-light (300)
+   - font-normal (400)
+   - font-medium (500)
+   - font-semibold (600)
+   - font-bold (700)
+   - font-extrabold (800)
+   - font-black (900)
+*/
+
+/* 파트너 로고 무한 스크롤 애니메이션 */
+@keyframes scroll-partner {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* 각 줄별 애니메이션 클래스 */
+.partner-scroll-1 {
+  animation: scroll-partner 20s linear infinite;
+}
+
+.partner-scroll-2 {
+  animation: scroll-partner 25s linear infinite reverse;
+}
+
+.partner-scroll-3 {
+  animation: scroll-partner 30s linear infinite;
 }
