@@ -18,7 +18,7 @@ export default function MembershipSection() {
           {/* Two Column Layout */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-2.5 md:gap-3 lg:gap-4">
             {/* Left Panel - 6 Months Only */}
-            <div className="relative overflow-hidden rounded-lg aspect-[5/3] md:aspect-[4/3]">
+            <div className="relative overflow-hidden rounded-lg aspect-[4/3] md:aspect-[3/2] lg:aspect-[5/3]">
               <Image
                 src="/assets/images/membership-1.jpg"
                 alt="6개월 구독 고객 전용"
@@ -29,7 +29,7 @@ export default function MembershipSection() {
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-yellow/30 via-yellow/20 to-transparent flex items-center">
-                <div className="p-3 md:p-4 lg:p-5 text-gray-500 relative z-10">
+                <div className="p-4 md:p-5 lg:p-6 xl:p-8 text-gray-500 relative z-10">
                   <div className="text-[10px] md:text-xs text-gray-600 uppercase mb-0.5 md:mb-1 whitespace-nowrap font-semibold">6 MONTHS ONLY</div>
                   <h3 className="text-sm md:text-base lg:text-lg font-bold mb-1 md:mb-1.5 whitespace-nowrap text-gray-600">
                     6개월 구독 고객 전용
@@ -45,7 +45,7 @@ export default function MembershipSection() {
             </div>
 
             {/* Right Panel - VB Subscription */}
-            <div className="relative overflow-hidden rounded-lg aspect-[5/3] md:aspect-[4/3]">
+            <div className="relative overflow-hidden rounded-lg aspect-[4/3] md:aspect-[3/2] lg:aspect-[5/3]">
               <Image
                 src="/assets/images/membership-2.jpg"
                 alt="프리미엄 구독 고객 전용"
@@ -56,7 +56,7 @@ export default function MembershipSection() {
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/35 to-black/20 flex items-center">
-                <div className="p-3 md:p-4 lg:p-5 text-white relative z-10">
+                <div className="p-4 md:p-5 lg:p-6 xl:p-8 text-white relative z-10">
                   <div className="text-[10px] md:text-xs text-white uppercase mb-0.5 md:mb-1 whitespace-nowrap font-medium">VB SUBSCRIPTION</div>
                   <h3 className="text-sm md:text-base lg:text-lg font-bold mb-1 md:mb-1.5 text-white whitespace-nowrap drop-shadow-lg">
                     프리미엄 구독 고객 전용

@@ -27,9 +27,9 @@ export default function VideoSection() {
           <p 
             className="noto-sans-kr text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-white leading-relaxed drop-shadow-lg font-normal"
           >
-            망설임을 내려놓고 선택하는 순간,
-            <br />
-            이제서야 나도 이런 머릿결을 느낄 수 있게 된다.
+            <span className="block md:inline">망설임을 내려놓고 선택하는 순간,</span>
+            <br className="md:hidden" />
+            <span className="block md:inline">이제서야 나도 이런 머릿결을 느낄 수 있게 된다.</span>
           </p>
         </div>
       </div>
