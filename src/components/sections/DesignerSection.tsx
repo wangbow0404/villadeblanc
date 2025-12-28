@@ -9,59 +9,59 @@ export default function DesignerSection() {
   const slides = [
     {
       id: 1,
-      image: '/assets/images/designer-1.jpeg',
+      image: '/assets/images/designer-1.jpg',
       bgColor: 'from-gray-200 to-gray-300',
       instagramUrl: 'https://www.instagram.com/_______hji/',
       naverReservationUrl: 'https://naver.me/FtGykcUQ',
     },
     {
       id: 2,
-      image: '/assets/images/designer-2.jpeg',
+      image: '/assets/images/designer-2.jpg',
       bgColor: 'from-gray-300 to-gray-400',
-      instagramUrl: 'https://www.instagram.com/_imjinju._/',
-      naverReservationUrl: 'https://naver.me/xAFbb9uH',
+      instagramUrl: 'https://www.instagram.com/vb.soyland/',
+      naverReservationUrl: 'https://naver.me/FSwrIVoR',
     },
     {
       id: 3,
       image: '/assets/images/designer-3.jpeg',
       bgColor: 'from-gray-400 to-gray-500',
-      instagramUrl: 'https://www.instagram.com/syoung.ww/',
-      naverReservationUrl: 'https://naver.me/5xaWZhJ1',
+      instagramUrl: 'https://www.instagram.com/seowe/',
+      naverReservationUrl: 'https://naver.me/5vcgKtKe',
     },
     {
       id: 4,
       image: '/assets/images/designer-4.jpeg',
       bgColor: 'from-gray-500 to-gray-600',
-      instagramUrl: 'https://www.instagram.com/designer4/',
-      naverReservationUrl: 'https://booking.naver.com/booking/designer4',
+      instagramUrl: 'https://www.instagram.com/_imjinju._/',
+      naverReservationUrl: 'https://naver.me/xAFbb9uH',
     },
     {
       id: 5,
       image: '/assets/images/designer-5.jpeg',
-      bgColor: 'from-gray-600 to-gray-700',
-      instagramUrl: 'https://www.instagram.com/designer5/',
-      naverReservationUrl: 'https://booking.naver.com/booking/designer5',
+      bgColor: 'from-gray-700 to-gray-800',
+      instagramUrl: 'https://www.instagram.com/syoung.ww/',
+      naverReservationUrl: 'https://naver.me/5xaWZhJ1',
     },
     {
       id: 6,
-      image: '/assets/images/designer-6.jpeg',
-      bgColor: 'from-gray-700 to-gray-800',
-      instagramUrl: 'https://www.instagram.com/designer6/',
-      naverReservationUrl: 'https://booking.naver.com/booking/designer6',
+      image: '/assets/images/designer-6.JPG',
+      bgColor: 'from-gray-600 to-gray-700',
+      instagramUrl: 'https://www.instagram.com/vb_uie/',
+      naverReservationUrl: 'https://naver.me/G3PBwjLV',
     },
     {
       id: 7,
-      image: '/assets/images/designer-7.jpeg',
+      image: '/assets/images/staff-1.jpg',
       bgColor: 'from-gray-800 to-gray-900',
-      instagramUrl: 'https://www.instagram.com/designer7/',
-      naverReservationUrl: 'https://booking.naver.com/booking/designer7',
+      instagramUrl: 'https://www.instagram.com/',
+      naverReservationUrl: 'https://naver.me/',
     },
     {
       id: 8,
-      image: '/assets/images/designer-8.jpeg',
+      image: '/assets/images/staff-2.jpg',
       bgColor: 'from-gray-900 to-gray-950',
-      instagramUrl: 'https://www.instagram.com/designer8/',
-      naverReservationUrl: 'https://booking.naver.com/booking/designer8',
+      instagramUrl: 'https://www.instagram.com/',
+      naverReservationUrl: 'https://naver.me/',
     },
   ];
 
@@ -100,7 +100,7 @@ export default function DesignerSection() {
                 }`}
               >
                 <div className="relative w-full h-full bg-white">
-                  {slide.image && slide.image.includes('.jpeg') ? (
+                  {slide.image && (slide.image.includes('.jpg') || slide.image.includes('.jpeg') || slide.image.includes('.JPG')) ? (
                     <Image
                       src={slide.image}
                       alt={`Designer ${slide.id}`}
@@ -162,14 +162,18 @@ export default function DesignerSection() {
             </div>
             
             <div className="text-xs md:text-sm uppercase tracking-wider opacity-80 order-1 lg:order-0">
-              DESIGNERS
+              {currentDesigner.id === 7 || currentDesigner.id === 8 ? 'CARELIST' : 'DESIGNERS'}
             </div>
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl xl:text-6xl font-bold uppercase tracking-tight leading-tight order-2">
               <span className="block">EXPERT</span>
               <span className="block">TEAM</span>
             </h2>
             <p className="text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed opacity-90 line-clamp-2 order-3">
-              VILLA de BLANC의 전문 헤어디자이너들을 만나 보세요.
+              {currentDesigner.id === 7 || currentDesigner.id === 8 
+                ? 'VILLA de BLANC의 전문 케어리스트들을 만나 보세요.' 
+                : currentDesigner.id === 6
+                ? 'VILLA de BLANC의 전문 메이크업아티스트를 만나 보세요.'
+                : 'VILLA de BLANC의 전문 헤어디자이너들을 만나 보세요.'}
             </p>
           </div>
         </div>

@@ -8,18 +8,18 @@ export default function VideoSection() {
     >
       {/* Full Screen Video */}
       <div className="absolute inset-0 w-full h-full overflow-hidden">
-        <video
+          <video
           className="w-full h-full object-cover md:scale-100 scale-[0.95] transition-transform duration-300"
-          autoPlay
-          muted
-          loop
-          playsInline
-        >
-          <source src="/assets/videos/video.mp4" type="video/mp4" />
-          <source src="/assets/videos/video.webm" type="video/webm" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
+            autoPlay
+            muted
+            loop
+            playsInline
+          >
+            <source src="/assets/videos/video.mp4" type="video/mp4" />
+            <source src="/assets/videos/video.webm" type="video/webm" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
 
       {/* Text Overlay - Centered */}
       <div className="relative z-10 w-full h-full flex items-center justify-center">
@@ -27,10 +27,10 @@ export default function VideoSection() {
           <p 
             className="noto-sans-kr text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-white leading-relaxed drop-shadow-lg font-normal"
           >
-            <span className="block md:inline">망설임을 내려놓고 선택하는 순간,</span>
-            <br className="md:hidden" />
-            <span className="block md:inline">이제서야 나도 이런 머릿결을 느낄 수 있게 된다.</span>
-          </p>
+              망설임을 내려놓고 선택하는 순간,
+              <br />
+              이제서야 나도 이런 머릿결을 느낄 수 있게 된다.
+            </p>
         </div>
       </div>
     </section>

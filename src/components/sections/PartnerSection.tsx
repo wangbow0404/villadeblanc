@@ -7,7 +7,7 @@ export default function PartnerSection() {
   // 각 매장의 로고 이미지 경로를 여기에 추가하세요
   // 예: { id: 1, name: '강남점', logo: '/assets/images/partners/partner-gangnam.png' }
   const partners = [
-    { id: 1, name: '매장 1', logo: '/assets/images/logo.png' },
+    { id: 1, name: '매장 1', logo: '/assets/images/moretty.png' },
     { id: 2, name: '매장 2', logo: '/assets/images/logo-2.png' },
     { id: 3, name: '매장 3', logo: '/assets/images/logo.png' },
     { id: 4, name: '매장 4', logo: '/assets/images/logo-2.png' },
