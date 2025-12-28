@@ -9,7 +9,7 @@ export default function DesignerSection() {
   const slides = [
     {
       id: 1,
-      image: '/assets/images/designer-1.jpg',
+      image: '/assets/images/designer-1.JPG',
       bgColor: 'from-gray-200 to-gray-300',
       instagramUrl: 'https://www.instagram.com/_______hji/',
       naverReservationUrl: 'https://naver.me/FtGykcUQ',
@@ -100,7 +100,7 @@ export default function DesignerSection() {
                 }`}
               >
                 <div className="relative w-full h-full bg-white">
-                  {slide.image && (slide.image.includes('.jpg') || slide.image.includes('.jpeg') || slide.image.includes('.JPG')) ? (
+                  {slide.image && (slide.image.toLowerCase().endsWith('.jpg') || slide.image.toLowerCase().endsWith('.jpeg')) ? (
                     <Image
                       src={slide.image}
                       alt={`Designer ${slide.id}`}
